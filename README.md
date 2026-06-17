@@ -11,6 +11,8 @@
 
 ## Theme Directory
 
+You may need to create the `themes` folder if it does not exist.
+
 - Windows:
   - Standard OBS install: `%AppData%\obs-studio\themes`
   - Portable OBS install: `<your OBS folder>\data\obs-studio\themes`
