@@ -1,6 +1,5 @@
 <p align="center">
   <h1>Void</h1>
-  <p>Pitch-black OBS theme with a grayscale palette and a clean AMOLED-style look.</p>
   <img src="assets/showcase.png">
 </p>
 
