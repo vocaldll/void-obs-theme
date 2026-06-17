@@ -1,7 +1,6 @@
-<p align="center">
-  <h1>Void</h1>
-  <img src="assets/showcase.png">
-</p>
+# Void
+
+![showcase](assets/showcase.png)
 
 ## Installation
 
