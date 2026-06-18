@@ -765,8 +765,8 @@ QListWidget::item:selected:focus {
 QMenu::item:selected:hover,
 QListView::item:selected:hover,
 QListWidget::item:selected:hover {
-    background: var(--primary_light);
-    border: 1px solid var(--primary_lighter);
+    background: var(--primary);
+    border: 1px solid var(--primary_light);
     color: var(--text);
 }
 
@@ -2157,7 +2157,7 @@ SceneTree {
 }
 
 .list-grid SceneTree::item:selected:hover {
-    background-color: var(--list_item_bg_hover);
+    background-color: var(--list_item_bg_selected);
 }
 
 /* Studio Mode T-Bar */
