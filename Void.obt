@@ -109,7 +109,7 @@
 
     /* TODO: Better Accessibility focus state */
     /* TODO: Move Accessibility Colors to Theme config system */
-    --border_highlight: var(--white4);
+    --border_highlight: var(--white3);
 
     /* OS Fixes */
     --os_mac_font_base_value: calc(1.2 * var(--obsFontScale));
@@ -184,7 +184,7 @@
     --input_border: var(--grey4);
     --input_border_width: 1px;
     --input_border_hover: var(--grey2);
-    --input_border_focus: var(--white4);
+    --input_border_focus: var(--border_highlight);
 
     --spacing_input: var(--spacing_base);
 
@@ -196,7 +196,7 @@
     --button_border_width: var(--input_border_width);
     --button_border: var(--grey5);
     --button_border_hover: var(--grey3);
-    --button_border_focus: var(--white4);
+    --button_border_focus: var(--border_highlight);
 
     --tab_bg: var(--black2);
     --tab_bg_hover: var(--black2);
@@ -205,7 +205,7 @@
 
     --tab_border: var(--border_color);
     --tab_border_hover: var(--grey3);
-    --tab_border_focus: var(--white3);
+    --tab_border_focus: var(--border_highlight);
     --tab_border_selected: var(--white4);
 
     --tab_padding_base: calc(5px + var(--padding_base));
@@ -888,7 +888,7 @@ QDockWidget::float-button:hover {
 QDockWidget::close-button:pressed,
 QDockWidget::float-button:pressed {
     background: var(--button_bg_down);
-    padding: 1px -1px -1px 1px;
+    padding: var(--padding_base);
 }
 
 QAbstractScrollArea {
@@ -1181,9 +1181,7 @@ QComboBox QAbstractItemView::item:hover {
 }
 
 QComboBox:hover,
-QComboBox:focus,
-QDateTimeEdit:hover,
-QDateTimeEdit:selected {
+QDateTimeEdit:hover {
     border-color: var(--input_border_hover);
 }
 
@@ -1213,6 +1211,8 @@ QComboBox:editable:hover {
 
 QComboBox:on,
 QDateTimeEdit:on,
+QComboBox:focus,
+QDateTimeEdit:focus,
 QComboBox:editable:focus {
     background-color: var(--input_bg_focus);
     border-color: var(--input_border_focus);
@@ -1404,11 +1404,12 @@ QDoubleSpinBox::down-arrow {
 #streamButton:hover:!pressed.state-active,
 #recordButton:hover:!pressed.state-active,
 #pauseRecordButton:hover:!pressed.state-active,
-#replayBufferButton:!pressed.state-active,
-#virtualCamButton:!pressed.state-active,
+#replayBufferButton:hover:!pressed.state-active,
+#virtualCamButton:hover:!pressed.state-active,
 #modeSwitch:hover:!pressed.state-active,
 #broadcastButton:hover:!pressed.state-active {
-    background: var(--primary_light);
+    background: var(--primary);
+    border-color: var(--primary_light);
     color: var(--text);
 }
 
@@ -2592,7 +2593,7 @@ idian--Row.hover > idian--CheckBox.row-buddy.checked::indicator {
 
 idian--CheckBox.hover::indicator,
 idian--CheckBox.checked.hover::indicator,
-idian--Row.hover > idian--CheckBox.row-buddy::indicator
+idian--Row.hover > idian--CheckBox.row-buddy::indicator,
 idian--Row.hover > idian--CheckBox.row-buddy.checked::indicator {
     border-color: var(--grey1);
 }
